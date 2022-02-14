@@ -8,19 +8,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
         <h1>Learning JS</h1>
-        <div>
-            <p>
-                Список дел
-            </p>
-            <ol id="list">
-                <li id="listItem">
-                    ПЕРВЫЙ
-                </li>
-            </ol>
-        </div>
-    </section>
-    <script src="todo.js"></script>
+
+<p >Click to display the time.</p>
+
+<button onclick="getElementById('demo').innerHTML=Date()">What is the time?</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.color = "red";
+}
+</script>
+<p id="demo" onclick="myFunction()"></p>
+
+<script>
+    // до вызова функции
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+console.log(menu.width);
+console.log(menu.height);
+
+multiplyNumeric(menu);
+
+console.log(menu.width);
+console.log(menu.height);
+
+// после вызова функции
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
+
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {
+      obj[key] *= 2;
+    }
+  }
+}
+</script>
+
 </body>
 </html>
